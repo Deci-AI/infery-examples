@@ -1,8 +1,5 @@
 import infery
 
-MODEL_LINK = "https://dips-models-public.s3.amazonaws.com/yonatan_imagenet_resnet18_DIPS.RTX3070.pkl"
-DOWNLOAD_LOCAL_PATH = "/tmp/model.pkl"
-
 if __name__ == "__main__":
     model = infery.load(
         model_path="../../models/resnet18_batchsize_64_RTX3070.pkl",
