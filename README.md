@@ -32,8 +32,12 @@ https://docs.deci.ai/docs/installing-infery
 
 ### Profiling
 
-<a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/layers_profiling/tensorrt_layers_profiling.py">
+<a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/model_profiling_and_inspection/tensorrt_layers_profiling.py">
 <img src="https://img.shields.io/badge/example-TensorRT Layers Profiling-purple"> 
+</a>
+
+<a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_notebooks/model_inspection.ipynb">
+<img src="https://img.shields.io/badge/example-Model Inspection-purple"> 
 </a>
 
 ### Contributing
