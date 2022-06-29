@@ -66,7 +66,7 @@ https://docs.deci.ai/docs/installing-infery
 
 
 ### Applications
-<a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_coreml.py">
+<a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/tasks/nlp/bert_sentiment_analysis.py">
     <img src="https://img.shields.io/badge/Bert-Sentiment Analysis-orange">
 </a>
 
