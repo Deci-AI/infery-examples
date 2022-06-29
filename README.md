@@ -30,7 +30,7 @@ https://docs.deci.ai/docs/installing-infery
 <img src="https://img.shields.io/badge/Cloud-V100-green">
 </a>
 
-### Frameworks (Copy-Paste scripts)
+### Frameworks Examples (Copy-Paste scripts)
 
 <a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_tensorrt.py">
     <img src="https://img.shields.io/badge/example-TensorRT-blue">
@@ -61,10 +61,17 @@ https://docs.deci.ai/docs/installing-infery
 </a>
 
 <a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_notebooks/model_inspection.ipynb">
-<img src="https://img.shields.io/badge/example-Model Inspection-purple"> 
+<img src="https://img.shields.io/badge/notebook-Model Inspection-purple"> 
+</a>
+
+
+### Applications
+<a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_coreml.py">
+    <img src="https://img.shields.io/badge/Bert-Sentiment Analysis-orange">
 </a>
 
 ### Contributing
-
+- Feel free to request a feature/example/application.
+  - Open an issue on GitHub and describe your desired usage.
 - Please format the code before opening a pull-request
     - `./scripts/lint.sh`

@@ -12,6 +12,7 @@ def main():
         model_path="../../../models/bert_sts_model.onnx",
         framework_type="onnx",
         inference_hardware="cpu",
+        # inference_hardware="gpu",
     )
 
     sentences_for_cassification = [
@@ -24,8 +25,8 @@ def main():
     ]
     print('-' * 8)
     for sentence in sentences_for_cassification:
-        model_input = tokenizer(sentence, return_tensors="np", max_length=384, padding='max_length')
-        sentiment = model.predict(**model_input)[0].argmax()  # 0 - Negative Sentiment, 1 - Positive Sentiment
+        tokenized_inputs = tokenizer(sentence, return_tensors="np", max_length=384, padding='max_length')
+        sentiment = model.predict(**tokenized_inputs)[0].argmax()  # 0 - Negative Sentiment, 1 - Positive Sentiment
         print(f'- {sentiment * 100}% positive.', 'Sentence:', f'"{sentence}"')
 
 
