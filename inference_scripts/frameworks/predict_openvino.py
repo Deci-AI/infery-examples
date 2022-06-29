@@ -6,7 +6,7 @@ import numpy as np
 
 def main():
     model = infery.load(
-        model_path="../../models/resnet50_batchsize_1_openvino.pkl",
+        model_path="../../models/hardware_specific_models/intel/resnet50_batchsize_1_openvino.pkl",
         framework_type="openvino",
         inference_hardware="cpu",
     )

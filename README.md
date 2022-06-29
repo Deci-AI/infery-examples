@@ -1,13 +1,37 @@
 # Deci Inference Examples
+
 A collection of demo-apps and inference scripts for various frameworks using infery.
 
-`infery` is Deci's Inference Engine for Python. It provides a robust API for inference and benchmarks for the following hardware:
+`infery` is Deci's Inference Engine for Python.<br>`infery` aims to provide a robust API for inference and benchmarks,
+on any hardware.
 
-<a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_openvino.py"><img src="https://img.shields.io/badge/Hardware-CPU-green"></a> <a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_tensorrt.py"><img src="https://img.shields.io/badge/Hardware-GPU-green"></a> <a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_tensorrt.py"><img src="https://img.shields.io/badge/Hardware-Nvidia Jetson-green"></a>
 ### Installation Guide
+
 https://docs.deci.ai/docs/installing-infery
 
+### Custom Hardware Examples
+
+<a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_openvino.py"><img src="https://img.shields.io/badge/Intel-CPU-green"></a>
+<a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_tensorrt.py"><img src="https://img.shields.io/badge/Nvidia-GPU-green"></a> <br>
+<a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_tensorrt.py">
+<img src="https://img.shields.io/badge/Jetson-Orin AGX-green">
+</a>
+<a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_tensorrt.py">
+<img src="https://img.shields.io/badge/Jetson-Xavier AGX-green">
+</a>
+<a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_tensorrt.py">
+<img src="https://img.shields.io/badge/Jetson-Nano-green">
+</a>
+<br>
+<a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_tensorrt.py">
+<img src="https://img.shields.io/badge/Cloud-T4-green">
+</a>
+<a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_tensorrt.py">
+<img src="https://img.shields.io/badge/Cloud-V100-green">
+</a>
+
 ### Frameworks (Copy-Paste scripts)
+
 <a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_tensorrt.py">
     <img src="https://img.shields.io/badge/example-TensorRT-blue">
 </a>
@@ -41,5 +65,6 @@ https://docs.deci.ai/docs/installing-infery
 </a>
 
 ### Contributing
+
 - Please format the code before opening a pull-request
     - `./scripts/lint.sh`
