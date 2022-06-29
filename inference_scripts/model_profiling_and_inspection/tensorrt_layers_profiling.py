@@ -15,7 +15,6 @@ def main():
         # model_path="../../models/hardware_specific_models/nvidia/jetson/nano/mobilenet-ssd_jetson_nano_optimized.pkl",     # Jetson Nano (TensorRT 8.0.1.6)
         # model_path="../../models/hardware_specific_models/nvidia/jetson/xavier/mobilenet-ssd_jetson_xavier_optimized.pkl", # Jetson Xavier (TensorRT 8.0.1.6)
         # model_path="../../models/hardware_specific_models/nvidia/jetson/orin/mobilenet-ssd_jetson_orin_optimized.pkl",     # Jetson Orin (TensorRT 8.4.0.8)
-
         framework_type="trt",
         profiling=True,
     )

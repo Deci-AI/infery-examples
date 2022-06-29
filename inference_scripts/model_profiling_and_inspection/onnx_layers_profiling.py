@@ -11,7 +11,7 @@ def main():
         model_path="../../models/resnet18_batchsize_64.onnx",
         framework_type="onnx",
         inference_hardware="cpu",
-        profiling=True
+        profiling=True,
     )
 
     # List all the layers, by percentile of execution time

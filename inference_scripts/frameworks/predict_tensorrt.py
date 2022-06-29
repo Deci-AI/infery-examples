@@ -29,8 +29,8 @@ def main():
     print(outputs)
 
     # Benchmarking
-    print('With IO:', model.benchmark(batch_size=1))
-    print('Without IO:', model.benchmark(batch_size=1, include_io=False))
+    print("With IO:", model.benchmark(batch_size=1))
+    print("Without IO:", model.benchmark(batch_size=1, include_io=False))
 
     # Quick benchmark - 100 forward passes, exclude IO and data copies.
     print(model.benchmark(batch_size=1, include_io=False, repetitions=100))
