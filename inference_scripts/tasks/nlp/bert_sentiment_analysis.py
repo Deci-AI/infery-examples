@@ -1,4 +1,5 @@
 import infery
+import numpy as np
 
 try:
     from transformers import AutoTokenizer
@@ -26,8 +27,14 @@ def main():
     print('-' * 8)
     for sentence in sentences_for_cassification:
         tokenized_inputs = tokenizer(sentence, return_tensors="np", max_length=384, padding='max_length')
-        sentiment = model.predict(**tokenized_inputs)[0].argmax()  # 0 - Negative Sentiment, 1 - Positive Sentiment
-        print(f'- {sentiment * 100}% positive.', 'Sentence:', f'"{sentence}"')
+        softmax = lambda x: np.exp(x) / np.sum(np.exp(x))
+        output = model.predict(**tokenized_inputs)[0]
+        sentiment = softmax(output)
+
+        # After softmax, index 1 will hold the confidence in a positive answer.
+        # 0 = Negative Sentiment; 1 = Positive Sentiment;
+        sentiment = sentiment[0][1] * 100
+        print(f'- {sentiment:.2f}% positive.', 'Sentence:', f'"{sentence}"')
 
 
 if __name__ == "__main__":
