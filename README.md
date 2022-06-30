@@ -1,13 +1,54 @@
 # Deci Inference Examples
+
 A collection of demo-apps and inference scripts for various frameworks using infery.
 
-`infery` is Deci's Inference Engine for Python. It provides a robust API for inference and benchmarks for the following hardware:
+`infery` is Deci's Inference Engine for Python.<br>`infery` aims to provide a robust API for inference and benchmarks,
+on any hardware.
 
-<a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_openvino.py"><img src="https://img.shields.io/badge/Hardware-CPU-green"></a> <a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_tensorrt.py"><img src="https://img.shields.io/badge/Hardware-GPU-green"></a> <a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_tensorrt.py"><img src="https://img.shields.io/badge/Hardware-Nvidia Jetson-green"></a>
-### Installation Guide
-https://docs.deci.ai/docs/installing-infery
+### Prerequisites:
+- Infery
+    - https://docs.deci.ai/docs/installing-infery
+- Git LFS
+    - We use Git LFS to store the checkpoints.
+    - `apt-get install git-lfs`
 
-### Frameworks (Copy-Paste scripts)
+```shell
+# 1. Install dependencies: 
+#   - python3 -m pip install <infery | infery-gpu | infery-openvino | infery-tensorrt | infery-onnx-gpu | infery-onnx-cpu | infery-tensorflow-gpu | infery-tensorflow-cpu | ... >
+#   - apt-get install git-lfs
+
+# 2. Clone this repo and download the example models
+git clone https://github.com/Deci-AI/infery-examples.git && cd infery-examples/ && git lfs fetch && git lfs checkout
+
+# 3. cd to the example's directory and run an example (The ONNX one, in this case).
+cd inference_scripts/frameworks && python3 predict_onnx.py
+```
+
+### Custom Hardware Examples
+<a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_tensorrt.py">
+<img src="https://img.shields.io/badge/Jetson-Orin AGX-green">
+</a>
+<a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_tensorrt.py">
+<img src="https://img.shields.io/badge/Jetson-Xavier AGX-green">
+</a>
+<a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_tensorrt.py">
+<img src="https://img.shields.io/badge/Jetson-Nano-green">
+</a>
+<br>
+<a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_tensorrt.py">
+<img src="https://img.shields.io/badge/Nvidia-T4-green">
+</a>
+<a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_tensorrt.py">
+<img src="https://img.shields.io/badge/Nvidia-V100-green">
+</a>
+<a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_openvino.py"><img src="https://img.shields.io/badge/Intel-CPU-teal"></a>
+<a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_coreml.py">
+    <img src="https://img.shields.io/badge/Apple-CoreML-blue">
+</a>
+
+
+### Frameworks Examples (Copy-Paste scripts)
+
 <a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_tensorrt.py">
     <img src="https://img.shields.io/badge/example-TensorRT-blue">
 </a>
@@ -37,9 +78,17 @@ https://docs.deci.ai/docs/installing-infery
 </a>
 
 <a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_notebooks/model_inspection.ipynb">
-<img src="https://img.shields.io/badge/example-Model Inspection-purple"> 
+<img src="https://img.shields.io/badge/notebook-Model Inspection-purple"> 
+</a>
+
+
+### Applications
+<a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/tasks/nlp/bert_sentiment_analysis.py">
+    <img src="https://img.shields.io/badge/Bert-Sentiment Analysis-orange">
 </a>
 
 ### Contributing
+- Feel free to request a feature/example/application.
+  - Open an issue on GitHub and describe your desired usage.
 - Please format the code before opening a pull-request
     - `./scripts/lint.sh`

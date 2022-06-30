@@ -6,7 +6,7 @@ import numpy as np
 
 def main():
     model = infery.load(
-        model_path="../../models/mobilenet_v2_bs1_fp32.mlmodel",
+        model_path="../../models/hardware_specific_models/apple/mobilenet_v2_bs1_fp32.mlmodel",
         framework_type="coreml",
         inference_hardware="cpu",
     )
