@@ -10,23 +10,21 @@ on any hardware.
     - https://docs.deci.ai/docs/installing-infery
 - Git LFS
     - We use Git LFS to store the checkpoints.
-    - Make sure to install git LFS, e.g `apt-get install git-lfs`.
+    - `apt-get install git-lfs`
 
 ```shell
 # 1. Install dependencies: 
-#   - python3 -m pip install infery | infery-gpu | infery-openvino | infery-tensorrt | infery-onnx-gpu | infery-onnx-cpu | infery-tensorflow-gpu | infery-tensorflow-cpu | ...
+#   - python3 -m pip install <infery | infery-gpu | infery-openvino | infery-tensorrt | infery-onnx-gpu | infery-onnx-cpu | infery-tensorflow-gpu | infery-tensorflow-cpu | ... >
 #   - apt-get install git-lfs
 
 # 2. Clone this repo and download the example models
-git clone https://github.com/Deci-AI/infery-examples.git && cd infery-examples/ && git lfs fetch
+git clone https://github.com/Deci-AI/infery-examples.git && cd infery-examples/ && git lfs fetch && git lfs checkout
 
-# 3. Run the ONNX (or any other) example.
-cd /inference_scripts/frameworks && python3 predict_onnx.py
+# 3. cd to the example's directory and run an example (The ONNX one, in this case).
+cd inference_scripts/frameworks && python3 predict_onnx.py
 ```
 
 ### Custom Hardware Examples
-#### Nvidia
-<a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_tensorrt.py"><img src="https://img.shields.io/badge/Nvidia-GPU-green"></a> <br>
 <a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_tensorrt.py">
 <img src="https://img.shields.io/badge/Jetson-Orin AGX-green">
 </a>
@@ -38,15 +36,12 @@ cd /inference_scripts/frameworks && python3 predict_onnx.py
 </a>
 <br>
 <a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_tensorrt.py">
-<img src="https://img.shields.io/badge/Cloud-T4-green">
+<img src="https://img.shields.io/badge/Nvidia-T4-green">
 </a>
 <a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_tensorrt.py">
-<img src="https://img.shields.io/badge/Cloud-V100-green">
+<img src="https://img.shields.io/badge/Nvidia-V100-green">
 </a>
-    
-#### Intel
-<a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_openvino.py"><img src="https://img.shields.io/badge/Intel-CPU-green"></a>
-#### Apple
+<a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_openvino.py"><img src="https://img.shields.io/badge/Intel-CPU-teal"></a>
 <a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_coreml.py">
     <img src="https://img.shields.io/badge/Apple-CoreML-blue">
 </a>
