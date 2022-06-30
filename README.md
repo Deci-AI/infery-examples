@@ -5,13 +5,27 @@ A collection of demo-apps and inference scripts for various frameworks using inf
 `infery` is Deci's Inference Engine for Python.<br>`infery` aims to provide a robust API for inference and benchmarks,
 on any hardware.
 
-### Installation Guide
+### Prerequisites:
+- Infery
+    - https://docs.deci.ai/docs/installing-infery
+- Git LFS
+    - We use Git LFS to store the checkpoints.
+    - Make sure to install git LFS, e.g `apt-get install git-lfs`.
 
-https://docs.deci.ai/docs/installing-infery
+```shell
+# 1. Install dependencies: 
+#   - python3 -m pip install infery | infery-gpu | infery-openvino | infery-tensorrt | infery-onnx-gpu | infery-onnx-cpu | infery-tensorflow-gpu | infery-tensorflow-cpu | ...
+#   - apt-get install git-lfs
+
+# 2. Clone this repo and download the example models
+git clone https://github.com/Deci-AI/infery-examples.git && cd infery-examples/ && git lfs fetch
+
+# 3. Run the ONNX (or any other) example.
+cd /inference_scripts/frameworks && python3 predict_onnx.py
+```
 
 ### Custom Hardware Examples
-
-<a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_openvino.py"><img src="https://img.shields.io/badge/Intel-CPU-green"></a>
+#### Nvidia
 <a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_tensorrt.py"><img src="https://img.shields.io/badge/Nvidia-GPU-green"></a> <br>
 <a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_tensorrt.py">
 <img src="https://img.shields.io/badge/Jetson-Orin AGX-green">
@@ -29,6 +43,14 @@ https://docs.deci.ai/docs/installing-infery
 <a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_tensorrt.py">
 <img src="https://img.shields.io/badge/Cloud-V100-green">
 </a>
+    
+#### Intel
+<a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_openvino.py"><img src="https://img.shields.io/badge/Intel-CPU-green"></a>
+#### Apple
+<a href="https://github.com/Deci-AI/infery-examples/blob/master/inference_scripts/frameworks/predict_coreml.py">
+    <img src="https://img.shields.io/badge/Apple-CoreML-blue">
+</a>
+
 
 ### Frameworks Examples (Copy-Paste scripts)
 
