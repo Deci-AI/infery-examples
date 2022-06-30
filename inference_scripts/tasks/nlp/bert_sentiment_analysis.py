@@ -7,6 +7,7 @@ except (ImportError, ModuleNotFoundError):
     print(
         'The "transformers" python package is required in order to run the NLP example.'
     )
+    exit(-1)
 
 
 def softmax(x: np.ndarray):
