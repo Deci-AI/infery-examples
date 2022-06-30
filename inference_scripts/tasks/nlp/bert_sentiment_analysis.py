@@ -24,7 +24,7 @@ def main():
         # inference_hardware="gpu",
     )
 
-    sentences_for_cassification = [
+    sentences_for_classification = [
         "I'm very happy!",
         "I had the worst day...",
         "The Deep-Learning ecosystem is hard to understand.",
@@ -33,7 +33,7 @@ def main():
         "Super-Gradients trains state-of-the-art models.",
     ]
     print("-" * 8)
-    for sentence in sentences_for_cassification:
+    for sentence in sentences_for_classification:
         tokenized_inputs = tokenizer(
             sentence, return_tensors="np", max_length=384, padding="max_length"
         )
